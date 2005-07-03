@@ -5,7 +5,7 @@
 
 %define		tarname		bdb
 
-Summary:	An interface to Berkeley DB and DB/XML
+Summary:	An interface to Berkeley DB 
 Name:		ruby-bdb
 Version:	0.5.6
 Release:	1
@@ -21,7 +21,7 @@ Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-An interface to Berkeley DB and DB/XML.
+An interface to Berkeley DB.
 
 %prep
 %setup -q -n %{tarname}-%{version}
