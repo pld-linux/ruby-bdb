@@ -1,10 +1,4 @@
-%define		ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define		ruby_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define		ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define		ruby_version	%(ruby -r rbconfig -e 'print Config::CONFIG["ruby_version"]')
-
 %define		tarname		bdb
-
 Summary:	An interface to Berkeley DB
 Summary(pl):	Interfejs do Berkeley DB
 Name:		ruby-bdb
@@ -17,6 +11,7 @@ Source0:	ftp://moulon.inra.fr/pub/ruby/bdb.tar.gz
 URL:		http://moulon.inra.fr/ruby/bdb.html
 BuildRequires:	db-devel
 BuildRequires:	make
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby-devel
 Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +29,7 @@ Interfejs do Berkeley DB.
 ruby extconf.rb
 %{__make}
 
-rdoc --ri --op ri src 
+rdoc --ri --op ri src
 rdoc --op rdoc src
 
 %install
