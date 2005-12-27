@@ -3,7 +3,7 @@ Summary:	An interface to Berkeley DB
 Summary(pl):	Interfejs do Berkeley DB
 Name:		ruby-bdb
 Version:	0.5.6
-Release:	1
+Release:	2
 License:	Ruby-alike
 Group:		Development/Languages
 Source0:	ftp://moulon.inra.fr/pub/ruby/bdb.tar.gz
@@ -13,7 +13,7 @@ BuildRequires:	db-devel
 BuildRequires:	make
 BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
