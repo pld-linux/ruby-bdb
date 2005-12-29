@@ -11,9 +11,9 @@ Source0:	ftp://moulon.inra.fr/pub/ruby/bdb.tar.gz
 URL:		http://moulon.inra.fr/ruby/bdb.html
 BuildRequires:	db-devel
 BuildRequires:	make
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
