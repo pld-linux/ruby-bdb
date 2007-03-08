@@ -2,12 +2,12 @@
 Summary:	An interface to Berkeley DB
 Summary(pl.UTF-8):	Interfejs do Berkeley DB
 Name:		ruby-bdb
-Version:	0.5.6
-Release:	2
+Version:	0.6.0
+Release:	1
 License:	Ruby-alike
 Group:		Development/Languages
-Source0:	ftp://moulon.inra.fr/pub/ruby/bdb.tar.gz
-# Source0-md5:	b3b4fed73d7639f71e995e37a9f2a6bd
+Source0:	ftp://moulon.inra.fr/pub/ruby/bdb-0.6.0.tar.gz
+# Source0-md5:	75ed9523bc695beb2bf2c9bea2676b87
 URL:		http://moulon.inra.fr/ruby/bdb.html
 BuildRequires:	db-devel
 BuildRequires:	rpmbuild(macros) >= 1.277
@@ -39,7 +39,7 @@ install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_examplesdir}/%{na
 	archdir=$RPM_BUILD_ROOT%{ruby_archdir} \
 	sitearchdir=$RPM_BUILD_ROOT%{ruby_archdir}
 
-cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
+cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
